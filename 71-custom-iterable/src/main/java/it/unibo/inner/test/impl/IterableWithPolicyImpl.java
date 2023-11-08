@@ -3,7 +3,7 @@ package it.unibo.inner.test.impl;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.Predicate;
+import it.unibo.inner.api.Predicate;
 
 import it.unibo.inner.api.IterableWithPolicy;
 
@@ -34,7 +34,7 @@ public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T>{
        return new IteratorImpl();
     }
 
-    @Override
+    //@Override
     public void setIterationPolicy(final Predicate<T> filter) {
         this.predicate = filter;
     }
@@ -74,5 +74,7 @@ public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T>{
             return list1;
         }
     }
+
+
     
 }
